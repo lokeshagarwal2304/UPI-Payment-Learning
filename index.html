@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LuvPay - UPI QR Payment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>LuvPay 🔐</h1>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?data=luv@ybl&size=150x150" alt="UPI QR" class="qr" />
+    <p>UPI ID: <strong>luv@ybl</strong></p>
+
+    <input type="number" id="amount" placeholder="Enter Amount (₹)" />
+    <button onclick="makePayment()">Pay Now</button>
+    <div id="loader" class="loader" style="display:none;">Processing...</div>
+    <div id="status" class="status"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
